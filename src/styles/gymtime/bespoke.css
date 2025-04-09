@@ -1,0 +1,372 @@
+/* 
+ * PŮVODNÍ ÚPRAVY PŘED ZÁSAHEM BESPOKE - ZAČÁTEK
+ */
+
+/* oprava horniho menu */
+header#header .header-top>div.navigation-custom {
+  flex: 1 !important;
+}
+
+/* skryti telefonni sluchatko */
+.top-navigation-contacts .project-phone:before {
+  display: none !important;
+}
+
+/* otoceni cen, sleva vs nova cena */
+.products .product .p .p-in .p-bottom>div .prices .price-standard {
+  order: 1 !important;
+  margin-left: 10px !important;
+  margin-right: 0 !important;
+}
+
+/* ramecky pryc a zvetseni dlazdic */
+.products .product .p {
+  border: unset !important;
+  padding: 0 !important;
+}
+
+/* detailni popis - zmena na mensi s gradientem, zbytek ovladani je v JS souboru */
+/* .basic-description {
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+  transition: 350ms all ease;
+}
+
+.basic-description:after {
+  content: "Zobrazit celý text";
+  color: red;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  text-decoration: underline;
+  cursor: pointer;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75) 75%, rgba(255, 255, 255, 1));
+} */
+
+/* .basic-description:hover:after {
+  text-decoration: none;
+} */
+
+/* rozkliknuty description nema to prekryti */
+/* .basic-description.expanded:after {
+  display: none !important;
+} */
+
+.switch-ceniky {
+  padding: 10px 0 20px 0;
+}
+
+.switch-ceniky a {
+  padding: 10px 30px;
+  margin: 10px 10px 0 0;
+  color: #fff;
+  background: #000;
+  border: none;
+  transition: 200ms all ease;
+}
+
+.switch-ceniky a:hover {
+  opacity: 0.7;
+}
+
+/* uprava banneru */
+.extended-banner-texts {
+  background-color: transparent !important;
+}
+
+/* posunm vlozit do kosiku niz */
+.p-info-wrapper .add-to-cart {
+  order: 1 !important;
+}
+
+/* odsazeni barev z doplnku */
+.c-product-interconnection-detail-params.is-template--Classic {
+  margin: 0 0 25px 0;
+}
+
+/* nastaveni textu "Barva" u toho noveho ciselniku */
+.c-product-interconnection-detail-params.is-template--Classic .c-product-interconnection-detail-params__type {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #000 !important;
+  padding-bottom: 6px !important;
+}
+
+.c-product-interconnection-detail-params {
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+
+.c-product-interconnection-detail-params__products a {
+  border: 1px solid #d9d9d9 !important;
+  width: auto !important;
+  padding: 5px !important;
+  height: auto !important;
+}
+
+.c-product-interconnection-detail-params__products span[class^="item-type"],
+.c-product-interconnection-detail-params__products a.is-current .item-type-bg {
+  border: 1px solid #ccc !important;
+  margin: 0 auto 3px auto;
+}
+
+/* prekryv overlay pri zvetseni fotky */
+/*#cboxOverlay {
+	z-index: 100000 !important;
+}*/
+
+#colorbox {
+  z-index: 2000000000 !important;
+}
+
+/* posun ceny nahoru */
+.p-info-wrapper .p-final-price-wrapper {
+  order: -2;
+}
+
+/* hlidaci pes */
+.p-info-wrapper .social-buttons-wrapper {
+  display: flex !important;
+  order: -1;
+  margin-bottom: 20px !important;
+}
+
+/* responz hlidaci pes  */
+@media(max-width:768px) {
+  .p-info-wrapper .social-buttons-wrapper {
+    justify-content: center;
+  }
+}
+
+/* to tu uz bylo */
+.kontakt-wrap {
+  display: inline-flex;
+}
+
+@media(max-width:767px) {
+  .kontakt-wrap {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .kontakt-wrap>div {
+    padding: 0;
+  }
+}
+
+.p-info-wrapper .detail-parameters .variant-list .advanced-parameter .parameter-value {
+  text-align: center;
+}
+
+@media(min-width:768px) {
+  .sidebar-inner {
+    position: sticky;
+    top: 100px;
+    z-index: 10
+  }
+}
+
+/* 
+ * PŮVODNÍ ÚPRAVY PŘED ZÁSAHEM BESPOKE - KONEC
+ */
+/* 
+ * BESPOKE - ZAČÁTEK
+ */
+
+/* Magazín v levém menu */
+.sidebar-inner .news-item-widget div {
+  display: none;
+  /* chyba v shoptetu - zobrazuje se perex, ikdyž je vypnutý náhled článku */
+}
+
+
+/* Magazín - www.gymtime.cz/magazin/ (zobrazení seznamu článků) */
+body:not(.type-detail) .breadcrumbs-wrapper {
+  display: block;
+}
+
+body.type-posts-listing:not(.in-magazin) h1:before {
+  content: "Gymtime magazín: ";
+}
+
+.news-item .article-header {
+  display: none;
+}
+
+.news-item .article-header {
+  padding: 0;
+  margin-bottom: 12px;
+  border: none;
+}
+
+.news-item .text .title {
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+@media (min-width: 1px) {
+
+  /* override min-width: 480px */
+  .news-item {
+
+    border-top: 1px solid #666666;
+    margin: 0;
+    padding-top: 1.6em;
+    padding-bottom: 1.6em;
+  }
+
+  .news-item:last-child {
+    border-bottom: 1px solid #666666;
+    padding-bottom: 1.6em;
+  }
+}
+
+/* zobrazení rubrik v záhlaví stránky (DS) */
+body.id-1104 .subcategories {
+  margin-bottom: 2em;
+}
+
+body.id-1104 .subcategories li {
+  padding: 0.15em 0.2em;
+}
+
+body.id-1104 .subcategories a {
+  background: none;
+  text-align: center;
+  background: #f5f5f5;
+  border-radius: 7px;
+}
+
+body.id-1104 .subcategories a:hover {
+  background: #333333;
+  color: white;
+}
+
+body.id-1104 .subcategories a:hover span {
+  color: white;
+}
+
+.subcategories.with-image li a {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding-left: 0px;
+}
+
+body.id-1104 .subcategories .image {
+  display: none;
+}
+
+.subcategories.with-image li a .text {
+  padding-left: 0;
+  width: calc(100% - 40px);
+  text-align: center;
+}
+
+/* Konkrétní příspevek na blogu (Šablona) */
+body.type-post .breadcrumbs-wrapper {
+  margin-top: 4em;
+}
+
+body.type-post .content-inner {
+  width: 720px;
+  max-width: 96%;
+  /* proč?*/
+  font-size: 16px;
+  line-height: 162%;
+}
+
+body.type-post .sidebar {
+  display: none;
+}
+
+body.type-post main#content {
+  justify-content: center;
+  display: flex;
+}
+
+body.type-post h1 {
+  font-size: 3em;
+  line-height: 1.3em;
+  margin-top: 1em;
+}
+
+body.type-post h2 {
+  /* DS edit 241211 */
+  font-size: 2em;
+  margin: 1.13em 0 0.62em;
+  line-height: 130%;
+}
+
+body.type-post h6 {
+  font-size: 20px;
+  line-height: 162%;
+}
+
+body.type-post p {
+  /* DS edit 241211 */
+  line-height: 160%;
+  font-size: 17px;
+}
+
+body.type-post p span a,
+body.type-post p a span,
+body.type-post a {
+  font-weight: 600 !important;
+  text-decoration: underline;
+  color: #303030;
+}
+
+body.type-post p a:hover,
+body.type-post a:hover,
+body.type-post p a:hover span {
+  color: black;
+}
+
+body.type-post blockquote {
+  margin: 0;
+  display: flex;
+  gap: 16px
+}
+
+body.type-post blockquote p {
+  font-weight: 300 !important;
+  font-size: 18px;
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 0 1em;
+}
+
+body.type-post blockquote::before {
+  content: url('https://www.gymtime.cz/user/documents/upload/blog/icon-citace.svg');
+  opacity: 0.1;
+  margin-top: 0.2em;
+}
+
+body.type-post .container.breadcrumbs-wrapper {
+  max-width: 760px;
+  display: block;
+}
+
+/* Responzivní příspěvky */
+@media (max-width: 768px) {
+  body.type-post h1 {
+    font-size: 2em;
+    line-height: 1.3em;
+  }
+}
+
+/* 
+     * BESPOKE - KONEC
+     */

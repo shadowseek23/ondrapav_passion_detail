@@ -1,0 +1,7 @@
+
+.sidebar .sidebar-inner .box-categories {
+    border-radius: 15px 15px 0 0;
+}
+#content-wrapper > div > aside > div > div.banner > div > span > ul {
+    border-radius: 0 0 15px 15px;
+}

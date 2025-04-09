@@ -1,0 +1,11 @@
+#description > div.description-inner {
+    display:flex;
+    flex-direction: column;
+}
+#description > div > div.basic-description {
+
+    width: 100%;
+}
+.p-detail-tabs-wrapper #tab-content #description .description-inner .extended-description .detail-parameters th, .p-detail-tabs-wrapper #tab-content #description .description-inner .extended-description .detail-parameters td {
+padding: 12px;
+}

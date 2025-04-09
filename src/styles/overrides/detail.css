@@ -1,0 +1,53 @@
+#product-detail-form > div > div.col-xs-12.col-lg-6.p-image-wrapper > div,
+#product-detail-form > div > div.col-xs-12.col-lg-6.p-image-wrapper > div > a > img {
+    border-radius: 30px;
+}
+#product-detail-form > div > div.col-xs-12.col-lg-6.p-info-wrapper > 
+div.quantity-discounts.js-quantity-discounts > div.quantity-discounts__table > 
+div.quantity-discounts__item:first-child {
+    border-radius: 15px 15px 0 0 ;
+}
+#product-detail-form > div > div.col-xs-12.col-lg-6.p-info-wrapper > 
+div.quantity-discounts.js-quantity-discounts > div.quantity-discounts__table > 
+div.quantity-discounts__item:last-child {
+    border-radius: 0 0 15px 15px ; 
+}
+
+#product-detail-form > div > div.col-xs-12.col-lg-6.p-info-wrapper > div.add-to-cart > button {
+    border-radius: 50px;
+}
+
+/* tlačítka*/
+
+.p-info-wrapper .add-to-cart {
+   gap: 8px;
+}
+
+.p-info-wrapper .add-to-cart .quantity {
+  display: flex;
+  padding: 0 8px !important;
+  width: auto !important;
+  border-radius: 15px !important;
+}
+
+.p-info-wrapper .add-to-cart .quantity input {
+  width: 33px;
+  height: 51px;
+  border: 0px solid #000;
+}
+
+.p-info-wrapper .add-to-cart .quantity button {
+	
+}
+
+.quantity .increase, .quantity .decrease {
+	width: 30px !important;
+    height: 30px !important;
+    border-radius: 8px !important;
+    padding-top: 2px;
+}
+
+:where(body.ums_product_quantity--on) .decrease__sign, :where(body.ums_product_quantity--on) .increase__sign {
+  display: unset !important;
+  font-size: 12px !important;
+}

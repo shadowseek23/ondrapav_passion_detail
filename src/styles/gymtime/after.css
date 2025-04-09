@@ -1,0 +1,33 @@
+
+/* custom css */
+	.news-item div.reading-time {
+  display:none;
+  }
+  
+/* tlacitka v kosiku */
+.p-info-wrapper .add-to-cart {
+   gap: 10px;
+}
+
+.p-info-wrapper .add-to-cart .quantity {
+  border-style: none !important;
+}
+
+.quantity input {
+  width: 33px;
+  height: 51px;
+  border: 2px solid #000;
+}
+
+.p-info-wrapper .add-to-cart button {
+	border-radius: unset !important;
+}
+
+.quantity .increase, .quantity .decrease {
+	width: 25px !important;
+}
+
+:where(body.ums_product_quantity--on) .decrease__sign, :where(body.ums_product_quantity--on) .increase__sign {
+  display: unset !important;
+}
+  
