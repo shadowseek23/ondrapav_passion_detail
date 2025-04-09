@@ -1,0 +1,26 @@
+html {
+  font-size: 16px; /*=rem */
+}
+body, p {
+  font-family: 'Helvetica', sans-serif;
+}
+a {
+  transition-duration: var(--transition-duration-fast);
+  transition-timing-function: var(--transition-function);
+  transition-property: color;
+}
+a:hover {
+}
+h1, h2 {
+
+}
+h3,h4, h5, h6 {
+
+}
+
+h1 {
+
+}
+h2 {
+
+}

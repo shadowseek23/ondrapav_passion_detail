@@ -1,0 +1,14 @@
+{
+    "templateData": {
+        "dev": {
+            "baseUrl": "https://hravesporty.slizek.cz/",
+            "imgDir": "/images/"
+        },
+        "prod": {
+            "baseUrl": "https://hravesporty.slizek.cz/",
+            "imgDir": "/images/",
+            "url-pribeh":"/pribeh-a-metodika/",
+            "url-pridej-se":"/pridej-se-k-nam/"
+        }
+    }
+}

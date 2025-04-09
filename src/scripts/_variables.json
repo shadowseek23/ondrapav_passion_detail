@@ -1,0 +1,12 @@
+  {
+    "colors": {
+    },
+    "breakpoints": {
+        "_comment": "769+, 1024+, (..)",
+        "gap": 32,
+        "tablet": 769,
+        "desktop": 1024,
+        "widescreen": 1216,
+        "fullhd": 1600
+    }
+  }
