@@ -1,19 +1,16 @@
 {
-  "name": "ondrapav_passion_detail",
+  "name": "Passion Static Template (Pobo)",
   "version": "1.0.0",
-  "description": "",
+  "description": "Statická šablona pro shoptet s využitím POBO prvků. Postaveno na BESPOKE Build Tool (Esbuild + Handlebars + PostCSS)",
   "main": "src/index.js",
   "scripts": {
     "build": "node build.js --production",
-    "dev": "node build.js --watch",
     "serve": "node build.js --serve",
-    "bulma-sass": "sass --watch --load-path=node_modules src/_scss/bulma.config.scss:src/styles/vendor/bulma.css --verbose",
-    "swiper-sass": "sass --watch --load-path=node_modules src/_scss/swiper.config.scss:src/styles/vendor/swiper.css --verbose",
     "images": "node images.js"
   },
   "keywords": [],
   "author": "BESPOKE Creative Collective",
-  "license": "ISC",
+  "license": "Creative Commons Non-Commercial, No Derivatives",
   "devDependencies": {
     "autoprefixer": "^10.4.18",
     "chokidar": "^4.0.3",
@@ -28,7 +25,6 @@
     "postcss-mixins": "^11.0.3",
     "postcss-nested": "^7.0.2",
     "postcss-simple-vars": "^7.0.1",
-    "sass": "^1.83.4",
     "fs-extra": "^11.3.0"
   }
 }
