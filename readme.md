@@ -10,6 +10,8 @@ npm install
 ```
 # Použití BESPOKE Build Tool
 
+## Serve
+
 ```bash
 npm run serve
 ```
@@ -18,10 +20,22 @@ npm run serve
 3) Spustí live server ve složce /dev/ na adrese http://127.0.0.1:8080/
 4) Sleduje a renderuje veškeré změny ve složkách /src/scripts/ + /src/styles/ + /src/templates/
 
+## Images
 ```bash
 npm run images
 ```
 Vymaže složku /dev/images/ a nahradí ji obsahem složky /src/images/
+
+## Build
+```bash
+npm run build
+```
+- Exportuje vybrané soubory do složky /dist/
+    - /src/production.shoptet-template-overrides.js > /production.shoptet-template-overrides.js + /production.shoptet-template-overrides.css
+    - /src/production.passion-widgets.js > /dist/production.passion-widgets.css
+    - /src/production.hbs > - /dist/production.html (lze zkopirovat do shoptetu)
+
+
 
 # PostCSS
 

@@ -106,7 +106,11 @@ async function processHbsFile(srcFile, destDir) {
 // Function to compile and write HTML
 async function generateHtml() {
   await registerPartials();
-  await processHbsFile('src/templates/index.hbs', outDir);
+  if(isProduction) {
+    await processHbsFile('src/templates/production.hbs', outDir);
+  } else {
+    await processHbsFile('src/templates/index.hbs', outDir);
+  }
 }
 
 /*
@@ -127,7 +131,10 @@ const postcssProcessor = postcss([
  * zpracovava JS a CSS do jednoho souboru (index.js, index.css)
  */
 
-/** @type {import('esbuild').BuildOptions} */
+/** @type {import('esbuild').BuildOptions} 
+ * 
+ * entrPoints apply only to npm run serve (overridden for build)
+*/
 const buildOptions = {
   entryPoints: [
     'src/index.js',
@@ -186,7 +193,6 @@ const buildOptions = {
     }
   }]
 };
-
 /*
  * utils
  */
@@ -235,12 +241,14 @@ async function serve() {
 async function build() {
   // Single build
   await purgeDir(outDir);
+  delete buildOptions.outdir;
+  buildOptions.entryPoints = ['src/production.passion-widgets.js'];
+  buildOptions.outfile = "/dist/passion-widgets.js";
+  await esbuild.build(buildOptions);
+  buildOptions.entryPoints = ['src/production.shoptet-template-overrides.js'];
+  buildOptions.outfile = "/dist/shoptet-template-overrides.js";
   await esbuild.build(buildOptions);
   await generateHtml();
-  // Open browser using dynamic import
-  const { default: open } = await import('open');
-  // TODO: Doplnit kompletní cestu k index.html
-  await open("");
   // await generateHtml();
 }
 
@@ -254,9 +262,18 @@ async function build() {
       process.exit(1);
     });
   } else if (isProduction) {
+    const { exec } = require('child_process');
+    exec('npm run images', (error, stdout, stderr) => {
+      if (error) {
+        console.error(`Error: ${error.message}`);
+        return;
+      }
+      console.log(`Output: ${stdout}`);
+    });
     build().catch((err) => {
       console.error('Error:', err);
       process.exit(1);
+
     });
   }
 }
