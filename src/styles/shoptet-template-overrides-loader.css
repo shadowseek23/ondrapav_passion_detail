@@ -1,0 +1,6 @@
+/* config / mixins */
+@import url("shoptet-template-overrides/sidebar.css");
+@import url("shoptet-template-overrides/detail-tabs.css");
+@import url("shoptet-template-overrides/header.css");
+@import url("shoptet-template-overrides/detail.css");
+@import url("shoptet-template-overrides/description.css");

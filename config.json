@@ -1,12 +1,15 @@
 {
     "templateData": {
         "dev": {
-            "baseUrl": "https://hravesporty.slizek.cz/",
-            "imgDir": "/images/"
+            "baseUrl": "",
+            "imgDir": "/images/",
+            "productImgDir": "/images/CokoladoveKoma/",
+            "linkLowCarb": "https://www.gymtime.cz/low-carb-3/" 
         },
         "prod": {
-            "baseUrl": "https://hravesporty.slizek.cz/",
+            "baseUrl": "",
             "imgDir": "/images/",
+            "productImgDir": "/images/CokoladoveKoma/",
             "url-pribeh":"/pribeh-a-metodika/",
             "url-pridej-se":"/pridej-se-k-nam/"
         }

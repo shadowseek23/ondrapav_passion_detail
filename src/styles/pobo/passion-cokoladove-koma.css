@@ -1,0 +1,85 @@
+.my-custom-pobo-identifier {
+    color: grey;
+}
+
+/*
+ * widget/page specific styles
+ */
+
+ /* ".p-detail-tabs-wrapper #tab-content #description .description-inner .basic-description" 
+ * nutne kvuli overridu nastavení z shoptet šablony */
+ .p-detail-tabs-wrapper #tab-content #description .description-inner .basic-description 
+ .passion-widgets {
+    #widget-usp-cokoladove-koma {
+        .rc-image-half-left__image {
+            
+        }
+        .rc-image-half-left__img {
+            object-fit: contain;
+            object-position: bottom;
+            left: 1em; right: 1em;
+            width: calc(100% - 2em) !important;
+        }
+        .rc-image-half-left__text {
+
+        }
+        @media screen and (min-width: 768px) and (max-width: 1439px) {
+            .inner-flex-container {display: none;}
+            .rc-image-half-left__img {
+                top: auto;
+                right: 4em;
+
+                object-position: bottom right;
+                transform: scale(1.2);
+                transform-origin: bottom right;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            .inner-flex-container {display: none;}
+            .rc-image-half-left {
+                padding: 0;
+         
+                .rc-image-half-left__image {
+                    margin-top: -6em;
+
+                }
+                .rc-image-half-left__img {
+                    top: auto;
+                    
+                    width: 80vw;
+                    max-height: 35em;
+                    position: relative;
+                    /* transform: scale(1.3) translateX(-5vw); */
+                    transform: scale(1.3);
+                    transform-origin: top right;
+                }
+            }          
+        }
+        
+    }
+    #widget-benefity {
+        background: #F0D7D8;
+        @media screen and (min-width: 1440px) {
+            display: none;
+        }
+    }
+    #widget-hlavni-ingredience {
+        .rc-jumbotron-one__wrap-img {
+            object-position: center top;
+            transform: translateY(25%);
+
+        }
+        h2 {
+            margin-bottom: 0.6em;
+        }
+        .rc-jumbotron-one__content-text {
+            padding-bottom: 5em;
+            @media screen and (max-width:767px) {
+                padding-bottom: 7em;
+            }
+        }
+        
+    }
+}
+

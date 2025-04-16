@@ -92,7 +92,7 @@ async function processHbsFile(srcFile, destDir) {
     const templatePath = path.join(__dirname, srcFile);
     const template = await fs.readFile(templatePath, 'utf8');
     const compiledTemplate = Handlebars.compile(template);
-
+    console.log(templateData);
     let html = compiledTemplate(templateData);     console.log('Compiled template...');
     const destFile = path.join(__dirname, destDir, `${filename}.html`);
 

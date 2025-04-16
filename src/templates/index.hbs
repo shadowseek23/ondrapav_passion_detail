@@ -1,29 +1,76 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
-  
-  <style>:root {--color-primary: #000000;--color-primary-h: 0;--color-primary-s: 0%;--color-primary-l: 0%;--color-primary-hover: #000000;--color-primary-hover-h: 0;--color-primary-hover-s: 0%;--color-primary-hover-l: 0%;--color-secondary: #000000;--color-secondary-h: 0;--color-secondary-s: 0%;--color-secondary-l: 0%;--color-secondary-hover: #000000;--color-secondary-hover-h: 0;--color-secondary-hover-s: 0%;--color-secondary-hover-l: 0%;--color-tertiary: #000000;--color-tertiary-h: 0;--color-tertiary-s: 0%;--color-tertiary-l: 0%;--color-tertiary-hover: #000000;--color-tertiary-hover-h: 0;--color-tertiary-hover-s: 0%;--color-tertiary-hover-l: 0%;--color-header-background: #ffffff;--template-font: "Poppins";--template-headings-font: "Poppins";--header-background-url: none;--cookies-notice-background: #F8FAFB;--cookies-notice-color: #252525;--cookies-notice-button-hover: #27263f;--cookies-notice-link-hover: #3b3a5f;--templates-update-management-preview-mode-content: "Náhled aktualizací šablony je aktivní pro váš prohlížeč."}</style>
+
+  <style>
+    :root {
+      --color-primary: #000000;
+      --color-primary-h: 0;
+      --color-primary-s: 0%;
+      --color-primary-l: 0%;
+      --color-primary-hover: #000000;
+      --color-primary-hover-h: 0;
+      --color-primary-hover-s: 0%;
+      --color-primary-hover-l: 0%;
+      --color-secondary: #000000;
+      --color-secondary-h: 0;
+      --color-secondary-s: 0%;
+      --color-secondary-l: 0%;
+      --color-secondary-hover: #000000;
+      --color-secondary-hover-h: 0;
+      --color-secondary-hover-s: 0%;
+      --color-secondary-hover-l: 0%;
+      --color-tertiary: #000000;
+      --color-tertiary-h: 0;
+      --color-tertiary-s: 0%;
+      --color-tertiary-l: 0%;
+      --color-tertiary-hover: #000000;
+      --color-tertiary-hover-h: 0;
+      --color-tertiary-hover-s: 0%;
+      --color-tertiary-hover-l: 0%;
+      --color-header-background: #ffffff;
+      --template-font: "Poppins";
+      --template-headings-font: "Poppins";
+      --header-background-url: none;
+      --cookies-notice-background: #F8FAFB;
+      --cookies-notice-color: #252525;
+      --cookies-notice-button-hover: #27263f;
+      --cookies-notice-link-hover: #3b3a5f;
+      --templates-update-management-preview-mode-content: "Náhled aktualizací šablony je aktivní pro váš prohlížeč."
+    }
+  </style>
   <link rel="stylesheet" href="index.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
 </head>
-  <body class="desktop admin-logged id-5361 in-low-carb-3 template-11 type-product type-detail multiple-columns-body columns-3 ums_back_to_shop_buttons--on ums_product_quantity--on ums_product_images_lazy_load--on mobile-header-version-0 unveiled" cz-shortcut-listen="true">
-    <div class="overall-wrapper">
-      {{> header}}
-      <div id="content-wrapper" class="container content-wrapper">
-        <div class="content-wrapper-in">
 
-          {{> aside}}
-          {{> main-product-top}}
-          {{!-- {{> product_low-sugar_koma}} --}}
-          {{> pobo-example}}
-          {{> main-product-bottom}}
-        </div>
-        </div>
+<body
+  class="desktop admin-logged id-5361 in-low-carb-3 template-11 type-product type-detail multiple-columns-body columns-3 ums_back_to_shop_buttons--on ums_product_quantity--on ums_product_images_lazy_load--on mobile-header-version-0 unveiled"
+  cz-shortcut-listen="true">
+  <div class="overall-wrapper">
+    {{> header}}
+    <div id="content-wrapper" class="container content-wrapper">
+      <div class="content-wrapper-in">
+
+        {{> aside}}
+        {{> main-product-top}}
+        {{> product_low-sugar_koma}}
+        {{!-- {{> test}} --}}
+        {{!-- {{> pobo-example}} --}}
+
+        {{> main-product-bottom}}
+      </div>
     </div>
-    <script type="module" src="./index.js"></script>
-  </body>
+  </div>
+  <script type="module" src="./index.js"></script>
+</body>
+
 </html>

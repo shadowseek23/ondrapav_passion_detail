@@ -5,6 +5,8 @@ const path = require('path');
 const copyImages = async () => {
   try {
     // Ensure target directories exist
+    await fs.remove('dev/images');
+    await fs.remove('dist/images');
     await fs.ensureDir('dev/images');
     await fs.ensureDir('dist/images');
 

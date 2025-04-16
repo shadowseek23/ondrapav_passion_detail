@@ -1,0 +1,201 @@
+
+
+/*
+ * ".p-detail-tabs-wrapper #tab-content #description .description-inner .basic-description" 
+ * nutne kvuli overridu nastavení z shoptet šablony
+ */
+.p-detail-tabs-wrapper #tab-content #description .description-inner .basic-description 
+.passion-widgets {
+    color: unset;
+    font-size: var(--pasion-font-size-em); /* =em */
+    font-weight: unset;
+
+    .larger-text p {
+        font-size: 1.1em
+    }
+    .widget-container {
+        padding: 0;
+        margin-bottom: 20px;
+        color: var(--passion-color-primary);
+        border-radius: var(--passion-border-radius);
+        overflow: hidden;
+        &.widget-container--make-text-black {
+            .rc-jumbotron-one__content {
+                h2, h2.rc-jumbotron-one__content-title, p, span {
+                    color: var(--passion-color-primary);
+                }
+                h3, h3.preheading {
+                    color:  #82898F;
+                }               
+            }            
+        }
+        &.widget-container--has-gradient .rc-image-half-left__image:before,
+        &.widget-container--has-gradient .rc-image-half-right__image:before, {
+                display: block;
+                content: " ";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 50;
+                width: auto;
+                height: auto;
+            }
+        &.widget-container--pink {
+            background: var(--passion-color-pink);
+        }
+        &.widget-container--purple {
+            background: var(--passion-color-purple);
+        }
+        &.widget-container--purple.widget-container--has-gradient {
+            .rc-image-half-left__image:before {
+                background: linear-gradient(270deg,rgba(197, 181, 217, 1) 0%, rgba(197, 181, 217, 0) 60%);
+            }
+            .rc-image-half-right__image:before {
+                background: linear-gradient(90deg,rgba(197, 181, 217, 1) 0%, rgba(197, 181, 217, 0) 60%);
+            }
+            @media screen and (max-width: 767px) {
+                .rc-image-half-right__image:before, 
+                .rc-image-half-right__image:before {
+                    background: linear-gradient(180deg,rgba(197, 181, 217, 1) 0%, rgba(197, 181, 217, 0) 60%);
+                } 
+            }
+        }
+        &.widget-container--grey{
+            background: var(--passion-color-grey);
+        }
+        &.widget-container--beige{
+            background: var(--passion-color-beige);
+        }
+        &.widget-container--yellow{
+            background: var(--passion-color-yellow);
+        }
+        &.widget-container--teal{
+            background: var(--passion-color-teal);
+        }
+        h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+            font-family: var(--font-primary);
+            color: var(--passion-color-primary);
+            font-weight: unset;
+            margin: 0;            
+        }
+        h3, .preheading {
+            color: white;
+            font-weight: 300;
+            text-transform: uppercase;
+            font-size: 15px;
+            letter-spacing: 0.4em;
+            margin: 0;
+            margin-bottom: 1.2em;
+        }
+        .widget-typography h2, 
+        .rc-jumbotron-one__content h2, 
+        .section-title {
+            text-transform: uppercase;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.2em;
+            letter-spacing: 0.03em;
+            margin: 0;            
+            margin-bottom: 0.9em;
+            padding: 0;
+            @media screen and (max-width: 1199px) {
+                font-size: 28px;
+            }
+            @media screen and (max-width: 767px) {
+            }
+            @media screen and (max-width: 420px) {
+            }
+        }
+        p, span {
+            color: var(--passion-color-primary);
+            line-height: 1.6em;
+            letter-spacing: 0.03em;
+        }
+        .inner-flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 0.8em 0.8em;
+            border-radius: var(--passion-border-radius);
+            /* > * {
+                flex: 1;
+            } */
+            &.inner-flex-container--white {
+                background-color: rgba(255,255,255,0.5);
+            }
+        }
+        
+        .iconbox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 120px;
+            padding-bottom: 0.4em;
+            padding-top: 0.2em;
+
+            .iconbox__icon {
+                width: 60px;
+                height: 60px;
+                object-fit: contain;
+            }
+            .iconbox__title {
+                /* font-size: 14px; */
+                font-size: 0.8em;
+                line-height: 1.4em;
+                text-transform: uppercase;
+                letter-spacing: 0.2em;
+                margin: 0.35em 0 0.3em;
+            }
+            .iconbox__value {
+                font-size: 20px;
+                font-weight: 700;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+    
+    .chip-link {
+        background: white;
+        display: inline-block;
+        padding: 1px 12px;
+        margin: 2px 0;
+        border-radius: 50px;
+        font-size: 0.85em;
+        font-weight: 500;
+
+        transition-property: background-color;
+        transition-timing-function: var(--passion-timing-fuction);
+        transition-duration: var(--passion-transition-duration-short);
+    }
+    .chip-link:hover {
+        background: black;
+        color: white;
+    }
+    .passion-script {
+        color: white;
+        text-decoration: none;
+        transition-property: text-decoration;
+        transition-timing-function: var(--passion-timing-fuction);
+        transition-duration: 1s;
+    }
+    a.passion-script:hover {
+        text-decoration: underline;
+    }
+    .script-image {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+    }
+    
+
+}
