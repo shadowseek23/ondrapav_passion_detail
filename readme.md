@@ -15,7 +15,8 @@ npm run serve
 ```
 1) S využitím Esbuild se provede transpilace a bundle veškerých css a js souborů linkovaných v /src/index.js do /dev/index.js a /dev/index.css
 2) Zparasuje se /src/templates/index.hbs do /dev/index.html (handlebars). Je možné linkovat veškeré partials ve složkách /src/templates/**/.
-3) Sleduje a renderuje veškeré změny ve složkách /src/scripts/ + /src/styles/ + /src/templates/
+3) Spustí live server ve složce /dev/ na adrese http://127.0.0.1:8080/
+4) Sleduje a renderuje veškeré změny ve složkách /src/scripts/ + /src/styles/ + /src/templates/
 
 ```bash
 npm run images
