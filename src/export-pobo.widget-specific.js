@@ -1,0 +1,1 @@
+import './styles/pure-pobo/passion-widget-specific-by-data-ids.css';

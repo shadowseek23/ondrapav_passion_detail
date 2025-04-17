@@ -10,5 +10,9 @@
             "productImgDir": "/user/documents/img/detail_produktu/passion/lowsugar-koma",
             "linkLowCarb": "low-carb-3/"
         }
-    }
+    },
+    "productionEntryPoints": [
+        "export-pobo.general-template.js",
+        "export-pobo.widget-specific.js"
+    ]
 }
