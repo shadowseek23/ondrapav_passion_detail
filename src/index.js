@@ -1,5 +1,5 @@
 // Import styles
-
+import './styles/shoptet-template/before.css';
 import './styles/shoptet-template/main.less.css';
 import './styles/shoptet-template/screen.css';
 import './styles/shoptet-template/inbetween.css';
@@ -34,5 +34,5 @@ import './styles/pure-pobo/passion-widget-specific-by-data-ids.css';
 * FAKE POBO BESPOKE OVERRIDES
 */
 
-// import "./styles/fake-pobo/passion-widgets.css";
-// import './styles/fake-pobo/passion-widget-specific.css';
+import "./styles/fake-pobo/passion-widgets.css";
+import './styles/fake-pobo/passion-widget-specific.css';

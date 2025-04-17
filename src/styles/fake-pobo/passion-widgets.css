@@ -5,7 +5,7 @@
  * nutne kvuli overridu nastavení z shoptet šablony
  */
 .p-detail-tabs-wrapper #tab-content #description .description-inner .basic-description 
-.passion-widgets {
+#pobo-standard-widget {
     color: unset;
     font-size: var(--pasion-font-size-em); /* =em */
     font-weight: unset;

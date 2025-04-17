@@ -9,7 +9,7 @@
  /* ".p-detail-tabs-wrapper #tab-content #description .description-inner .basic-description" 
  * nutne kvuli overridu nastavení z shoptet šablony */
  .p-detail-tabs-wrapper #tab-content #description .description-inner .basic-description 
- .passion-widgets {
+ #pobo-standard-widget {
     #widget-usp-cokoladove-koma {
         .rc-image-half-left__image {
             
