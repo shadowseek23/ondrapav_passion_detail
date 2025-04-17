@@ -15,6 +15,3 @@
     --passion-transition-duration-short: 0.2s;
     --font-primary: 'Gabarito', 'Segoe UI', 'Helvetica', sans-serif;
 }
-&.widget-container--{
-            background: var(--passion-color-);
-        }

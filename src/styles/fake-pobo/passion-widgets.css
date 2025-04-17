@@ -1,0 +1,164 @@
+
+
+/*
+ * ".p-detail-tabs-wrapper #tab-content #description .description-inner .basic-description" 
+ * nutne kvuli overridu nastavení z shoptet šablony
+ */
+.p-detail-tabs-wrapper #tab-content #description .description-inner .basic-description 
+#pobo-standard-widget {
+    color: unset;
+    font-size: var(--pasion-font-size-em); /* =em */
+    font-weight: unset;
+
+    .larger-text p {
+        font-size: 1.1em;
+        @media screen and (max-width: 1199px) {
+           
+        }
+        @media screen and (max-width: 767px) {
+             /* font-size: 1em; */
+        }
+        @media screen and (max-width: 420px) {
+        } 
+    }
+    .widget-container {
+        .passion-button {
+            background: var(--passion-color-primary);
+            border-radius: 50px;
+            padding: 0.3em 1.8em;
+            line-height: 1em;
+            color: white;
+            display: flex;
+            gap: 0.6em;
+            align-items: center;
+            align-self: center;
+            font-weight: 500;
+
+            .passion-button__chevron {
+                display: inline-block;
+                content: " ";
+                width: 0.75em;
+                height: 0.75em;
+                /* background-image: url(attr(data-image-src)); */
+                color: white !important;
+                z-index: 100;
+            }
+            &:hover {
+                background: var(--passion-color-purple);
+                color: var(--passion-color-primary);
+                font-weight: 500;
+                text-decoration: none;
+                .passion-button__chevron {
+                    filter: invert(1);
+                    
+                }
+            }
+        }
+        .passion-button--white {
+            background: white;
+            color: var(--passion-color-primary);
+
+            .passion-button__chevron {
+                filter: invert(1);
+            }
+        }
+        .passion-button--white:hover {
+            background: var(--passion-color-primary);
+            color: white;
+            .passion-button__chevron {
+                filter: invert(0);
+            }
+        }
+        .inner-flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 0.8em 0.8em;
+            border-radius: var(--passion-border-radius);
+            /* > * {
+                flex: 1;
+            } */
+            &.inner-flex-container--white {
+                background-color: rgba(255,255,255,0.5);
+            }
+        }
+        
+        .iconbox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 120px;
+            padding-bottom: 0.4em;
+            padding-top: 0.2em;
+
+            .iconbox__icon {
+                width: 60px;
+                height: 60px;
+                object-fit: contain;
+            }
+            .iconbox__title {
+                /* font-size: 14px; */
+                font-size: 0.8em;
+                line-height: 1.4em;
+                text-transform: uppercase;
+                letter-spacing: 0.2em;
+                margin: 0.35em 0 0.3em;
+            }
+            .iconbox__value {
+                font-size: 20px;
+                font-weight: 700;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+    
+    .chip-link {
+        background: white;
+        display: inline-block;
+        padding: 1px 12px;
+        margin: 2px 0;
+        border-radius: 50px;
+        font-size: 0.85em;
+        font-weight: 500;
+
+        transition-property: background-color;
+        transition-timing-function: var(--passion-timing-fuction);
+        transition-duration: var(--passion-transition-duration-short);
+    }
+    .chip-link:hover {
+        background: black;
+        color: white;
+    }
+    .passion-script {
+        color: white;
+        text-decoration: none;
+        transition-property: text-decoration;
+        transition-timing-function: var(--passion-timing-fuction);
+        transition-duration: 1s;
+    }
+    a.passion-script:hover {
+        text-decoration: underline;
+    }
+    .script-image-wrapper {
+        display: inline-block;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        .script-image-wrapper__text {
+            color: white;
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+    }
+    
+
+}

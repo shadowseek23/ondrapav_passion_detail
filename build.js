@@ -237,19 +237,27 @@ async function serve() {
   liveServer.start(serverConfig);
 }
 
-// TODO: Dodelat
 async function build() {
   // Single build
   await purgeDir(outDir);
   delete buildOptions.outdir;
-  buildOptions.entryPoints = ['src/production.passion-widgets.js'];
-  buildOptions.outfile = "/dist/passion-widgets.js";
-  await esbuild.build(buildOptions);
-  buildOptions.entryPoints = ['src/production.shoptet-template-overrides.js'];
-  buildOptions.outfile = "/dist/shoptet-template-overrides.js";
-  await esbuild.build(buildOptions);
+  for(let entryFile of config.productionEntryPoints) {
+    buildOptions.entryPoints = ['./src/'+entryFile];
+    buildOptions.outfile = "./dist/"+entryFile;
+    await esbuild.build(buildOptions);
+  } 
   await generateHtml();
-  // await generateHtml();
+  /*
+   * npm run images
+   */
+  const { exec } = require('child_process');
+  exec('npm run images', (error, stdout, stderr) => {
+    if (error) {
+      console.error(`Error: ${error.message}`);
+      return;
+    }
+    console.log(`Output: ${stdout}`);
+  });
 }
 
 /*
@@ -262,14 +270,6 @@ async function build() {
       process.exit(1);
     });
   } else if (isProduction) {
-    const { exec } = require('child_process');
-    exec('npm run images', (error, stdout, stderr) => {
-      if (error) {
-        console.error(`Error: ${error.message}`);
-        return;
-      }
-      console.log(`Output: ${stdout}`);
-    });
     build().catch((err) => {
       console.error('Error:', err);
       process.exit(1);
