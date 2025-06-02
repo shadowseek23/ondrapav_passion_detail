@@ -1,0 +1,7 @@
+@import "../mixins/_mixins-modules.css";
+.p-detail-tabs-wrapper #tab-content #description .description-inner .basic-description 
+#pobo-standard-widget .widget-container {
+    .passion-button {
+        @mixin button;
+    }
+}

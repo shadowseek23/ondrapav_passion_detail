@@ -61,12 +61,12 @@ if (isProduction) {
 
 async function registerPartial(file) {
   if (path.extname(file) === '.hbs') {
-    console.log('📂 Loading partial:', file);
+    // console.log('📂 Loading partial:', file);
     const partialName = path.basename(file, '.hbs');
-    console.log('📂 Partial name:', partialName);
+    // console.log('📂 Partial name:', partialName);
     const partialContent = await fs.readFile(file, 'utf8');
     Handlebars.registerPartial(partialName, partialContent);
-    console.log('📂 Partial registered:', partialName);
+    // console.log('📂 Partial registered:', partialName);
   }
 }
 async function registerPartialsFromDir(partialsDir) {
@@ -81,8 +81,9 @@ async function registerPartialsFromDir(partialsDir) {
 async function registerPartials() {
   await registerPartialsFromDir(path.join(__dirname, 'src/templates/layout'));
   await registerPartialsFromDir(path.join(__dirname, 'src/templates/pages'));
-  await registerPartialsFromDir(path.join(__dirname, 'src/templates/modules'));
-  await registerPartialsFromDir(path.join(__dirname, 'src/templates/other_partials'));
+  // await registerPartialsFromDir(path.join(__dirname, 'src/templates/modules'));
+  // await registerPartialsFromDir(path.join(__dirname, 'src/templates/other_partials'));
+  await registerPartialsFromDir(path.join(__dirname, 'src/templates/widgets'));
   console.log('📑 Registered Handlebars partials');
   return true;
 }
@@ -153,6 +154,12 @@ const buildOptions = {
     '.js': 'js',
     '.css': 'css'
   },
+  external: [
+    '*.svg', '*.png', '*.jpg', '*.jpeg', '*.gif', '*.svg', '*.webp',
+    "*.esm.js", "https://*", "http://*",
+    "*.eot?#iefix", "*.eot", "*.ttf", "*.woff", "*.woff2",
+    "allison-script.svg#youworkforthem"
+  ],
   plugins: [{
     name: 'postcss',
     setup(build) {
@@ -252,6 +259,13 @@ async function build() {
    */
   const { exec } = require('child_process');
   exec('npm run images', (error, stdout, stderr) => {
+    if (error) {
+      console.error(`Error: ${error.message}`);
+      return;
+    }
+    console.log(`Output: ${stdout}`);
+  });
+  exec('npm run fonts', (error, stdout, stderr) => {
     if (error) {
       console.error(`Error: ${error.message}`);
       return;

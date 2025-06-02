@@ -1,0 +1,40 @@
+
+
+/*
+ * ".p-detail-tabs-wrapper #tab-content #description .description-inner .basic-description" 
+ * nutne kvuli overridu nastavení z shoptet šablony
+ */
+.p-detail-tabs-wrapper #tab-content #description .description-inner .basic-description 
+#pobo-standard-widget .widget-container {
+    .iconbox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 120px;
+        padding-bottom: 0.4em;
+        padding-top: 0.2em;
+
+        &__icon {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+        &__value, span:nth-child(2) {
+            font-size: 20px;
+            font-weight: 700;
+            padding: 0;
+            margin: 0;
+            min-height: 1.6em;
+        }
+        &__title {
+            /* font-size: 14px; */
+            font-size: 0.8em;
+            line-height: 1.4em;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin: 0.4em 0 0.3em;
+            color: var(--color-primary); 
+        }
+    }
+}

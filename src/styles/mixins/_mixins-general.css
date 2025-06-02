@@ -1,0 +1,39 @@
+@define-mixin allison {
+    font-family: 'AllisonScript-Regular', Helvetica, Arial, Sans-Serif;
+	-moz-font-feature-settings:'calt=0,dlig=0,liga=0,swsh=0';
+}
+
+@define-mixin text-outline--white-2px {
+    text-shadow:
+            -0.5px -0.5px 0.3px white, 
+            0   -0.5px 0.3px white,
+            0.5px -0.5px 0.3px white,
+        -0.5px  0   0.3px white,
+            0.5px  0   0.3px white,
+        -0.5px  0.5px 0.3px white,
+            0    0.5px 0.3px white,
+            0.5px  0.5px 0.3px white;
+}
+@define-mixin larger-text {
+    p {
+        font-size: 1.1em;
+        @media screen and (max-width: 1199px) {
+           
+        }
+        @media screen and (max-width: 767px) {
+             /* font-size: 1em; */
+        }
+        @media screen and (max-width: 420px) {
+        } 
+    }
+}
+@define-mixin make-text-black {
+    .rc-jumbotron-one__content {
+        h2, h2.rc-jumbotron-one__content-title, p, span {
+            color: var(--passion-color-primary);
+        }
+        h3, h3.preheading {
+            color:  #82898F;
+        }               
+    }            
+}

@@ -1,0 +1,99 @@
+
+@define-mixin --has-gradient {
+    .rc-image-half-left__image:before,
+    .rc-image-half-right__image:before, {
+        display: block;
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 50;
+        width: auto;
+        height: auto;
+    }
+}
+
+@define-mixin --pink {
+    background: var(--color-pink);
+}
+@define-mixin --pink-light {
+    background: var(--color-pink-light);
+}
+@define-mixin --grey {
+    background: var(--color-grey);
+    h3 {
+        color: #82898F;
+    }
+}
+@define-mixin --purple {
+    background: var(--color-purple);
+}
+@define-mixin --purple--has-gradient {
+    @mixin --purple;
+    @mixin --has-gradient;
+
+    .rc-image-half-left__image:before {
+        background: linear-gradient(270deg,rgba(197, 181, 217, 1) 0%, rgba(197, 181, 217, 0) 60%);
+    }
+    .rc-image-half-right__image:before {
+        background: linear-gradient(90deg,rgba(197, 181, 217, 1) 0%, rgba(197, 181, 217, 0) 60%);
+    }
+    @media screen and (max-width: 767px) {
+        .rc-image-half-left__image:before, 
+        .rc-image-half-right__image:before {
+            background: linear-gradient(180deg,rgba(197, 181, 217, 1) 0%, rgba(197, 181, 217, 0) 60%);
+        } 
+    }
+}
+@define-mixin --beige--has-gradient {
+    background: var(--color-beige);
+
+    .rc-image-half-left__image:before {
+        background: linear-gradient(270deg,rgba(187, 183, 171, 1) 0%, rgba(187, 183, 171, 0) 50%);
+    }
+    .rc-image-half-right__image:before {
+        background: linear-gradient(90deg,rgba(187, 183, 171, 1) 0%, rgba(187, 183, 171, 0) 50%);
+    }
+    @media screen and (max-width: 767px) {
+        .rc-image-half-left__image:before, 
+        .rc-image-half-right__image:before {
+            background: linear-gradient(180deg,rgba(187, 183, 171, 1) 0%, rgba(187, 183, 171, 0) 30%);
+        } 
+    }
+}
+@define-mixin --yellow--has-gradient {
+    background: var(--color-yellow);
+
+    .rc-image-half-left__image:before {
+        background: linear-gradient(270deg,rgba(222, 189, 144, 1) 0%, rgba(222, 189, 144, 0) 60%);
+    }
+    .rc-image-half-right__image:before {
+        background: linear-gradient(90deg,rgba(222, 189, 144, 1) 0%, rgba(222, 189, 144, 0) 60%);
+    }
+    @media screen and (max-width: 767px) {
+        .rc-image-half-left__image:before, 
+        .rc-image-half-right__image:before {
+            background: linear-gradient(180deg,rgba(222, 189, 144, 1) 0%, rgba(222, 189, 144, 0) 60%);
+        } 
+    }
+}
+@define-mixin --teal--has-gradient {
+    background: var(--color-teal);
+
+    .rc-image-half-left__image:before {
+        background: linear-gradient(270deg,rgba(182, 211, 217, 1) 0%, rgba(182, 211, 217, 0) 60%);
+    }
+    .rc-image-half-right__image:before {
+        background: linear-gradient(90deg,rgba(182, 211, 217, 1) 0%, rgba(182, 211, 217, 0) 60%);
+    }
+    @media screen and (max-width: 767px) {
+        .rc-image-half-left__image:before, 
+        .rc-image-half-right__image:before {
+            background: linear-gradient(180deg,rgba(182, 211, 217, 1) 0%, rgba(182, 211, 217, 0) 60%);
+        } 
+    }
+}
+
+

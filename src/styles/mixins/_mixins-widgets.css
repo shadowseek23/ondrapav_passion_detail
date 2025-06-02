@@ -1,0 +1,356 @@
+@import "_mixins-modules.css";
+@import "_breakpoints.css";
+
+@define-mixin widget-image-half {
+    /* .widget-image-half-left, 
+    .widget-image-half-right { */
+    .widget-typography {
+        height: 100%;
+    }
+    /* .widget-image-half-left .rc-image-half-left,
+    .widget-image-half-right .rc-image-half-right { */
+    .rc-image-half-left,
+    .rc-image-half-right {        
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        flex-wrap: wrap;
+        max-width: 100%;
+        height: 100%;
+        &__image {
+            /* background: lightblue; */
+            position: relative;
+            padding: 0;
+            /* flex: 1 1 0%;  */
+            /* sirka 50%;*/
+            width: 50%;
+            min-height: 250px;
+            height: 100%;
+            
+            box-sizing: border-box;
+            &:before {
+                display: block;
+                content: " ";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 50;
+                width: auto;
+                height: auto;
+            }
+        }
+        &__img {
+            object-fit: cover;
+            position: absolute;
+            object-fit: cover;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }    
+        &__text {
+            /* background: lightcoral; */
+            box-sizing: border-box;
+            /* flex: 1 1 0%;   */
+            /* sirka 50%;*/
+            width: 50%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            padding: 3em 2.5em 3em 2.5em ;
+            @media screen and (max-width: 1199px) {
+                padding: 3em 1.5em 3em 1.5em ;
+            }
+            @media screen and (max-width: 767px) {
+                padding: 3em 2.5em 2em 2.5em;
+            }
+            @media screen and (max-width: 420px) {
+                padding: 2em 1.8em 1em 1.8em;
+            }
+        }      
+    }
+    @media screen and (max-width: 767px) {
+        .rc-image-half-left,
+        .rc-image-half-right {
+            padding: 0;
+            height: auto;
+            flex-direction: column;
+            &__image,
+            &__text {
+                width: 100%;
+            }
+        }
+
+        .widget-image-half-right 
+        .widget-image-half-left .rc-image-half-left .rc-image-half-left__img,
+        .widget-image-half-right .rc-image-half-right .rc-image-half-right__img {
+            position: relative;
+            top: auto;
+            /* width: 80vw; */
+            max-height: 22em;
+            /* transform: scale(1.3) translateX(-5vw); */
+            /* transform: scale(1.3); */
+            transform-origin: center center;
+        }
+        
+    }
+}   
+@define-mixin widget-image-half-left {
+    @mixin widget-image-half;
+
+                /* .rc-image-half-left__text {
+                padding: 4em 3.5em 2em 0 ;
+                @media screen and (max-width: 1199px) {
+                    padding: 4em 3em 2em 0 ;
+                }
+                @media screen and (max-width: 767px) {
+                    padding: 4em 2.5em 2em 2.5em;
+                }
+                @media screen and (max-width: 420px) {
+                    padding: 2em 1.8em 2em 1.8em;
+                }
+            }         */
+}
+@define-mixin widget-image-half-right {
+    @mixin widget-image-half;
+    .rc-image-half-right__image {
+        flex: 0 1 auto; 
+        padding: 0;
+        /* background: lightblue; */
+        position: relative;
+    }
+    .rc-image-half-right__text {
+        /* padding: 4em 0em 2em 3.5em ; */
+        /* background: lightcoral; */
+        @media screen and (max-width: 1199px) {
+            /* padding: 4em 0em 2em 3em ; */
+        }
+        @media screen and (max-width: 767px) {
+            /* padding: 4em 2.5em 2em 2.5em; */
+        }
+        @media screen and (max-width: 420px) {
+            /* padding: 2em 1.8em 2em 1.8em; */
+        }
+    }   
+}
+@define-mixin widget-advantages-three {
+    margin: 0;
+    .rc-advantages-three {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        padding: 1em;
+        flex-wrap: wrap;
+
+        &__item {
+            max-width: 140px;
+        }
+        &__ico-container {
+            background: none;
+            margin: 0;
+            width: unset;
+            height: unset;
+            img {
+                background: none;
+            }
+        }
+        &__info {
+            display: flex;
+            flex-direction: column-reverse;
+
+            &-header {
+            /* font-size: 14px; */
+            font-size: 0.8em;
+            line-height: 1.4em;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin: 0.35em 0 0.3em;
+            }
+            &-text {
+                font-size: 20px;
+                font-weight: 700;
+                padding: 0;
+                margin: 0;
+            }
+        }        
+    }
+}
+@define-mixin widget-jumbotron-one { /*.rc-jumbotron-one-with-button*/
+    .widget-projector, 
+    .rc-jumbotron-one {
+        height: 100%;
+    }
+    .rc-jumbotron-one__wrap {
+        background: none;
+        display: flex;
+        align-items: stretch;  
+        height: 100%;              
+    }
+    .rc-jumbotron-one__wrap-img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .rc-jumbotron-one__content {                
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        padding: 3em;
+
+        @media screen and (max-width:767px) {
+            padding: 3em;
+        }
+    }
+    .rc-jumbotron-one__content-title {
+        display: block;
+        max-width: 15em;
+    }
+    .rc-jumbotron-one__content-text {
+        margin: 0;
+        padding: 0;
+        max-width: 20em;
+        /* font-size: 1em; --pobo-jumbotron-one-content-text-font-size: 16px; */
+    } 
+    .rc-jumbotron-one__link {
+        @mixin button;
+    }
+}
+
+@define-mixin --half {
+    width: calc(50% - 10px);
+    @media screen and (max-width: 1199px) {
+        width: 100%;
+    }
+}
+@define-mixin --text-half {
+    .rc-jumbotron-one__wrap {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;  
+        height: 100%;   
+
+        .rc-jumbotron-one__content {
+            width: 70%;
+            @mixin from-fullhd {
+                width: 60%;
+            }
+            @mixin mobile {
+                width: 80%; 
+            }
+            @mixin tiny-mobile {
+                width: 100%; 
+            }
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            gap: 20px;
+            padding-top: 60px;
+            padding-bottom: 60px;
+
+ 
+
+            .rc-jumbotron-one__content-title, .preheading {
+                margin: 0;
+                padding: 0;
+            }
+            
+        }
+
+    }
+}
+@define-mixin --text-half-left {
+    @mixin --text-half;
+    .rc-jumbotron-one__wrap {
+        justify-content: flex-start;
+    }
+    .rc-jumbotron-one__wrap-img {
+        left: 50%;
+        @mixin mobile {
+            left: 70%;
+        }
+        width: 40%;
+        object-position: center left;
+    }       
+}
+@define-mixin --text-half-right {
+    @mixin --text-half;
+    .rc-jumbotron-one__wrap {
+        justify-content: flex-end;
+    }
+    .rc-jumbotron-one__wrap-img {
+        right: 50%;
+         @mixin mobile {
+            right: 70%;
+        }
+        width: 40%;
+        object-position: center right;
+    }
+}
+/*
+* card-call-to-action - NEPOUŽITO
+*/
+#pobo-standard-widget .widget-card-call-to-action {
+    border-radius: 0 !important;
+    .rc-card-call-to-action__wrap {
+        box-shadow: none;
+    }
+    .rc-card-call-to-action__single {
+        position: relative;
+        border-radius: var(--passion-border-radius);
+        overflow: hidden;
+        box-shadow: none;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+        > * {
+            width: 50%;
+        }
+        .rc-card-call-to-action__image {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 50%;
+            bottom: 0;
+            left: 0;
+            width: calc(50%);
+            height: 100%;
+
+            height: 100%;
+            border-radius: 0;
+            overflow: hidden;
+            img {
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                border-radius: 0;
+                transform: scale(2);
+            }
+        }
+    }
+    .rc-card-call-to-action__single:nth-child(2) {
+        flex-direction: row-reverse;
+    }
+}

@@ -6,7 +6,8 @@
   "scripts": {
     "build": "node build.js --production",
     "serve": "node build.js --serve",
-    "images": "node images.js"
+    "images": "node images.js",
+    "fonts": "node fonts.js"
   },
   "keywords": [],
   "author": "BESPOKE Creative Collective",

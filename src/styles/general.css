@@ -1,0 +1,100 @@
+@import "./mixins/_mixins-general.css";
+
+.p-detail-tabs-wrapper #tab-content #description .description-inner .basic-description #pobo-standard-widget {
+    .widget-container {
+        padding: 0;
+        color: var(--passion-color-primary);
+        border-radius: var(--passion-border-radius);
+        overflow: hidden;
+
+        .widget-projector {/*kvuli flex-stretch > obrazky pres celou vysku widgetu*/
+            height: 100%;
+        }
+
+        /*
+         * typography
+         */
+        h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+            font-family: var(--font-primary);
+            color: var(--passion-color-primary);
+            font-weight: unset;
+            margin: 0;
+            em {                      
+                @mixin allison;
+                @mixin text-outline--white-2px;
+
+                display: inline-block;
+                position: relative;
+
+                text-transform: none;
+                color: white;
+                font-size: 3em;
+
+
+                font-weight: 400;
+                white-space: nowrap;
+                font-style: normal;
+                margin-right: 0.12em;
+                
+                line-height: 0.62em;
+                margin: 0.05em;
+                top: 0.135em;
+                /* top: 1.8rem;
+                line-height: 1rem;
+                margin-top: 0.2em;
+                margin-bottom: -0.5em; */
+
+
+                /* margin-bottom: -0.5em; */
+            }
+        }
+        h3, .preheading {
+            color: white;
+            font-weight: 300;
+            text-transform: uppercase;
+            font-size: 15px;
+            letter-spacing: 0.4em;
+            margin: 0;
+            margin-bottom: 1.2em;
+        }
+        h2, .section-title {
+            text-transform: uppercase;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.2em;
+            letter-spacing: 0.03em;
+            margin: 0;            
+            margin-bottom: 0.9em;
+            padding: 0;
+            @media screen and (max-width: 1199px) {
+                font-size: 28px;
+            }
+            @media screen and (max-width: 767px) {
+            }
+            @media screen and (max-width: 420px) {
+            }
+        }
+        p, span {
+            color: var(--passion-color-primary);
+            line-height: 1.6em;
+            letter-spacing: 0.03em;
+        }
+        
+        /*
+         * utils
+         */
+        .inner-flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 0.8em 0.8em;
+            border-radius: var(--passion-border-radius);
+            /* > * {
+                flex: 1;
+            } */
+            &--white {
+                background-color: rgba(255,255,255,0.5);
+            }
+        }
+    }
+}

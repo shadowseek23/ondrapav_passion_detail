@@ -1,0 +1,64 @@
+$tinymobile: 380px;
+$tablet: 769px; /* todo */  
+$desktop: 992px; /* todo */
+$widescreen: 1200px;
+$fullhd: 1408px; /* todo */
+
+@define-mixin tiny-mobile {
+    @media screen and (max-width: calc($tinymobile - 1px)) {
+        @mixin-content;
+    }
+}
+@define-mixin mobile {
+    @media screen and (max-width: calc($tablet - 1px)) {
+        @mixin-content;
+    }
+}
+
+@define-mixin touch {
+    @media screen and (max-width: calc($desktop - 1px)) {
+        @mixin-content;
+    }
+}
+
+@define-mixin until-widescreen {
+    @media screen and (max-width: calc($widescreen - 1px)) {
+        @mixin-content;
+    }
+}
+
+
+@define-mixin from-tablet {
+    @media screen and (min-width: $tablet) {
+        @mixin-content;
+    }
+}
+
+@define-mixin from-desktop {
+    @media screen and (min-width: $desktop) {
+        @mixin-content;
+    }
+}
+
+@define-mixin from-widescreen {
+    @media screen and (min-width: $widescreen) {
+        @mixin-content;
+    }
+}
+@define-mixin widescreen {
+    @media screen and (min-width: $widescreen) {
+        @mixin-content;
+    }
+}
+
+@define-mixin from-fullhd {
+    @media screen and (min-width: $fullhd) {
+        @mixin-content;
+    }
+}
+
+@define-mixin only-desktop {
+    @media screen and (min-width: $desktop) and (max-width: calc($widescreen - 1px)) {
+        @mixin-content;
+    }
+}

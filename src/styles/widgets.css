@@ -1,0 +1,36 @@
+@import "./mixins/_mixins-widgets.css";
+@import "./mixins/_mixins-template.css";
+.p-detail-tabs-wrapper #tab-content #description .description-inner .basic-description 
+#pobo-standard-widget {
+    .widget-image-half-left--pink {
+        @mixin widget-image-half-left;
+        @mixin --pink;
+    }
+    .widget-advantages-three--light-pink,
+    .widget-advantages-three--pink-light {
+        @mixin widget-advantages-three;
+        @mixin --pink-light;
+    }
+    .widget-image-half-right--purple--has-gradient {
+        @mixin widget-image-half-right;
+        @mixin --purple--has-gradient;
+    }
+    .widget-jumbotron-one--grey {
+        @mixin widget-jumbotron-one;
+        @mixin --grey;
+    }
+    .widget-jumbotron-one--half--text-half-right--grey {
+        @mixin widget-jumbotron-one;
+        @mixin --half;
+        @mixin --text-half-right;
+        @mixin --grey;
+    }
+}
+
+/* wtff ???? */
+.p-detail-tabs-wrapper #tab-content #description .description-inner .basic-description #pobo-standard-widget {
+    .widget-jumbotron-one, 
+    .rc-jumbotron-one-with-button {
+        background: var(--color-grey);
+    }
+} 

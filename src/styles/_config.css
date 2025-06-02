@@ -1,0 +1,33 @@
+:root {
+    --pasion-font-size-em: 16px; /*defines em */
+    --font-size-em: 16px; /*defines em */
+
+    /* --passion-color-primary: #172530;
+    --passion-color-grey: #EDEDED;
+    --passion-color-pink: #E2B0B1;
+    --passion-color-purple: #C5B5D9;
+    --passion-color-beige: #BBB7AB;
+    --passion-color-yellow: #DEBD90;
+    --passion-color-teal: #B6D3D9; */
+    
+    --color-primary: #172530;
+    --color-grey: #EDEDED;
+    --color-pink: #E2B0B1;
+    
+    --color-pink-light: #F0D7D8;
+    --color-purple: #C5B5D9;
+    --color-beige: #BBB7AB;
+    --color-yellow: #DEBD90;
+    --color-teal: #B6D3D9;
+
+    --passion-gradient-purple: linear-gradient(90deg, rgba(197, 181, 217, 1) 0%, rgba(197, 181, 217, 0) 100%);
+
+    --passion-border-radius: 20px;
+    --passion-timing-fuction: ease-in-out;
+    --passion-transition-duration-short: 0.2s;
+
+    --font-primary: 'Gabarito', 'Segoe UI', 'Helvetica', sans-serif;
+    /* --font-allison: viz mixin */
+
+    --img-chevron: url("/images/CokoladoveKoma/icon-chevron.svg");
+}
