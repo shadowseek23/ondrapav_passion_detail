@@ -1,0 +1,18 @@
+.widget-container,
+.content-editor__preview-inner,
+.p-detail-tabs-wrapper #tab-content #description .description-inner .basic-description 
+#pobo-standard-widget .widget-container {
+    .inner-flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 0.8em 0.8em;
+        border-radius: var(--passion-border-radius);
+        /* > * {
+            flex: 1;
+        } */
+        &--white {
+            background-color: rgba(255,255,255,0.5);
+        }
+    }
+}

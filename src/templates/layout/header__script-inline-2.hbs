@@ -1,0 +1,65 @@
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+      if (getShoptetDataLayer('pageType') === 'billingAndShipping') {
+
+        try {
+          if (window.ApplePaySession && window.ApplePaySession.canMakePayments()) {
+            document.querySelector('#order-billing-methods .radio-wrapper[data-guid="e2d9d53a-0188-11ef-b95f-1606246b557a"]').classList.add('cgapplepay');
+          }
+        } catch (err) { }
+
+
+        const cgBaseCardPaymentMethod = {
+          type: 'CARD',
+          parameters: {
+            allowedAuthMethods: ["PAN_ONLY", "CRYPTOGRAM_3DS"],
+            allowedCardNetworks: [/*"AMEX", "DISCOVER", "INTERAC", "JCB",*/ "MASTERCARD", "VISA"]
+          }
+        };
+
+        function cgLoadScript(src, callback) {
+          var s,
+            r,
+            t;
+          r = false;
+          s = document.createElement('script');
+          s.type = 'text/javascript';
+          s.src = src;
+          s.onload = s.onreadystatechange = function () {
+            if (!r && (!this.readyState || this.readyState == 'complete')) {
+              r = true;
+              callback();
+            }
+          };
+          t = document.getElementsByTagName('script')[0];
+          t.parentNode.insertBefore(s, t);
+        }
+
+        function cgGetGoogleIsReadyToPayRequest() {
+          return Object.assign(
+            {},
+            {
+              apiVersion: 2,
+              apiVersionMinor: 0
+            },
+            {
+              allowedPaymentMethods: [cgBaseCardPaymentMethod]
+            }
+          );
+        }
+
+        function onCgGooglePayLoaded() {
+          let paymentsClient = new google.payments.api.PaymentsClient({ environment: 'PRODUCTION' });
+          paymentsClient.isReadyToPay(cgGetGoogleIsReadyToPayRequest()).then(function (response) {
+            if (response.result) {
+              document.querySelector('#order-billing-methods .radio-wrapper[data-guid="e2e34063-0188-11ef-b95f-1606246b557a"]').classList.add('cggooglepay');
+            }
+          })
+            .catch(function (err) { });
+        }
+
+        cgLoadScript('https://pay.google.com/gp/p/js/pay.js', onCgGooglePayLoaded);
+
+      }
+    });
+  </script>

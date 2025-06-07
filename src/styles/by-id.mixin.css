@@ -1,11 +1,11 @@
 @import "./mixins/_mixins-general.css";
+@import "./mixins/_mixins-widgets.css";
 @import "./mixins/_breakpoints.css";
 
-
-.p-detail-tabs-wrapper #tab-content #description .description-inner .basic-description
-#pobo-standard-widget {
-    /* USP */
-    [data-pobo-widget-id="220"] {
+@define-mixin by-id {
+    /* 01 - USP */
+    [data-pobo-widget-id="220"],
+    [data-cy="widget-list-item-220"] {
 
         @mixin larger-text;
         @mixin from-widescreen {
@@ -99,15 +99,19 @@
         }
         
     }
-    /* vyhody */
-    [data-pobo-widget-id="221"] {
+    /* 02 - vyhody */
+    [data-pobo-widget-id="221"],
+    [data-cy="widget-list-item-221"] {
         background: #F0D7D8;
+    }
+    [data-pobo-widget-id="221"] { /* nechceme aby se widget schovaval v pobo editoru */
         @media screen and (min-width: 1440px) {
             display: none;
         }
     }
-    /* chut*/
-    [data-pobo-widget-id="222"] {
+    /* 03 - chut*/
+    [data-pobo-widget-id="222"],
+    [data-cy="widget-list-item-222"] {
         @mixin larger-text;
         h2 {
             margin: 0;
@@ -129,8 +133,9 @@
             margin: 0;
         }
     }
-    /* hlavni ingredience */
-    [data-pobo-widget-id="223"] {
+    /* 04 - hlavni ingredience */
+    [data-pobo-widget-id="223"],
+    [data-cy="widget-list-item-223"] {
         min-height: 20em;
 
         .rc-jumbotron-one__wrap-img {
@@ -140,7 +145,7 @@
         }
         h2, h2.rc-jumbotron-one__preheading {
             margin-bottom: 0.6em;
-            max-width:300px !important;
+            max-width:380px !important;
         }
         .rc-jumbotron-one__content-text {
             padding-bottom: 5em;
@@ -149,8 +154,9 @@
             }
         }
     }
-    /* stevie */
-    [data-pobo-widget-id="224"] {
+    /* 05 - stevie */
+    [data-pobo-widget-id="224"],
+    [data-cy="widget-list-item-224"] {
         /*
         * widget-specific
         */
@@ -198,11 +204,22 @@
             } */
         /* } */
     }
-    /* vlaknina */
-    [data-pobo-widget-id="1821686"] {
+    /* 06 - vlaknina */
+    [data-pobo-widget-id="230"],
+    [data-cy="widget-list-item-"] {
         /*
         * widget specific
         */
+        /* .rc-jumbotron-one__wrap {
+            &-img {
+                right: 50%;
+                @mixin mobile {
+                    right: 70%;
+                }
+                width: 40%;
+                object-position: center right;
+            }
+        } */
         .rc-jumbotron-one__wrap:before {
             display: block;
             position: absolute;
@@ -218,16 +235,17 @@
             left: 45%;
             width: 55%;
         }
+        
         /* .widget-container.widget-container--half { */
-            width: calc(50% - 10px);
+            /* width: calc(50% - 10px);
 
             @media screen and (max-width: 1199px) {
                 width: 100%;
-            }
+            } */
         /* } */
         /* .widget-jumbotron-one--text-half-left,
         .widget-jumbotron-one--text-half-right { */
-            .rc-jumbotron-one__wrap {
+            /* .rc-jumbotron-one__wrap {
                 display: flex;
                 flex-direction: row;
                 align-items: stretch;  
@@ -247,8 +265,109 @@
                     }
                     
                 }
-            }
+            } */
         /* } */
         
     }
+    /* 07 - protein */
+    [data-pobo-widget-id="231"],
+    [data-cy="widget-list-item-231"] {
+        @mixin larger-text;
+        .rc-image-half-left__text {
+            align-items: stretch;
+            text-align: center
+        }
+        .rc-image-half-left__image {
+            overflow: hidden;
+        }
+        .rc-image-half-left__img {
+            object-position: bottom left;
+            @media  screen and (min-width: 768px) and (max-width: 1199px) {
+                transform: scale(1.8);
+                transform-origin: bottom left;
+            }
+            @media  screen and (min-width: 1200px) and (max-width: 1439px) {
+                transform: scale(1.5);
+                transform-origin: bottom left;
+            }
+        }
+    }
+    /* 08 - filozofie */
+    [data-pobo-widget-id="232"],
+    [data-cy="widget-list-item-232"] {
+        @mixin widget-image-half--larger-on-desktop;
+        h3 {
+            margin-bottom: 0.8em;
+        }
+        h2 {
+            margin: 0em;
+            max-width: 12em;
+            align-self: center;
+        }
+        .inner-flex-container {
+            /* max-width: 20em;
+            align-self: center;
+            margin-bottom: 0.3em;
+            justify-content: center; */
+            @mixin from-fullhd {
+                margin-top: 2em;
+                padding: 0 !important; 
+                margin-bottom: 2em;
+
+            }
+        }  
+    }
+    /* 09 - idealni svacinka */
+    [data-pobo-widget-id="233"],
+    [data-cy="widget-list-item-233"] {
+
+        min-height: 28em;
+        .rc-image-half-left__image {
+            overflow: visible;
+        }
+        .rc-image-half-left__img {
+            object-position: center 88%;
+        }
+        @media screen and (max-width: 767px) {
+            .rc-image-half-left__image:before {
+                display: none;
+            }
+            .rc-image-half-left__img {
+                object-position: center 50%;
+                height: 51em;
+                margin-top: -25em;
+                max-height: unset;
+            }
+            .rc-image-half-left__text {
+                .section-title, p {
+                    color: #080D11;
+                }
+            }
+        }            
+    }
+    /* 10 - mini cookies */
+    [data-pobo-widget-id="234"],
+    [data-cy="widget-list-item-234"] {        
+        @mixin --make-clickable;
+        h2 {
+            margin-bottom: 0.3em;
+        }
+        .rc-image-half-right__image {
+            @mixin tiny-mobile {
+                min-height: 50vw;
+            }
+            @mixin mobile {
+                min-height: 45vw;
+            }
+        }
+        .rc-image-half-right__img {
+            object-fit: contain;
+            object-position: bottom right;
+            @media  screen and (min-width: 768px) and (max-width: 1199px) {
+                transform: scale(1.3);
+                transform-origin: bottom left;
+            }
+        }        
+    }
+    
 }

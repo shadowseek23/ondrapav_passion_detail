@@ -15,16 +15,12 @@
             0.5px  0.5px 0.3px white;
 }
 @define-mixin larger-text {
-    p {
-        font-size: 1.1em;
-        @media screen and (max-width: 1199px) {
-           
+    p, span {        
+        font-size: var(--passion-font-size-larger);
+        @mixin from-widescreen {
+            font-size: calc(var(--passion-font-size-larger));
         }
-        @media screen and (max-width: 767px) {
-             /* font-size: 1em; */
-        }
-        @media screen and (max-width: 420px) {
-        } 
+        
     }
 }
 @define-mixin make-text-black {

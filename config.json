@@ -12,7 +12,11 @@
         }
     },
     "productionEntryPoints": [
+        "dist.final.js"   
+    ],
+    "--backup--productionEntryPoints": [
+        "export.final.js",
         "export-pobo.general-template.js",
-        "export-pobo.widget-specific.js"
+        "export-pobo.widget-specific.js"        
     ]
 }

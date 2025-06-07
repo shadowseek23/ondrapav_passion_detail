@@ -1,0 +1,52 @@
+@import "./mixins/_mixins-widgets.css";
+@define-mixin widgets {
+    
+    .widget-image-half-left--pink {
+        @mixin widget-image-half-left;
+        @mixin --pink;
+    }
+    .widget-advantages-three--light-pink,
+    .widget-advantages-three--pink-light {
+        @mixin widget-advantages-three;
+        @mixin --pink-light;
+    }
+    .widget-image-half-right--purple--has-gradient {
+        @mixin widget-image-half-right;
+        @mixin --purple--has-gradient;
+    }
+    .widget-jumbotron-one--grey {
+        @mixin widget-jumbotron-one;
+        @mixin --grey;
+    }
+    .widget-jumbotron-one--half--text-half-right--grey {
+        @mixin widget-jumbotron-one;
+        @mixin --half;
+        @mixin --text-half-right;
+        @mixin --grey;
+    }
+    .widget-jumbotron-one--half--text-half-left--grey {
+        @mixin widget-jumbotron-one;
+        @mixin --half;
+        @mixin --text-half-left;
+        @mixin --grey;
+    }
+    .widget-image-half-left--beige--has-gradient {
+        @mixin widget-image-half-left;
+        @mixin --beige--has-gradient;
+    }
+    .widget-image-half-right--has-button--yellow--has-gradient {
+        @mixin widget-image-half-right;
+        /* @mixin --has-button; */
+        @mixin --yellow--has-gradient;
+    }
+    .widget-image-half-left--mobile-img-full-height--teal--has-gr,
+    .widget-image-half-left--mobile-img-full-height--teal--has-gradient {
+        @mixin widget-image-half-left;
+        @mixin --mobile-img-full-height;
+        @mixin --teal--has-gradient;
+    }
+    .widget-passion-low-sugar-mini-cookies {
+        @mixin widget-image-half-right;
+        @mixin --pink;
+    }
+}

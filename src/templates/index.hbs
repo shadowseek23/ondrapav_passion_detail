@@ -1,46 +1,9 @@
-<!doctype html>
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-
-  
-  <link rel="stylesheet" href="index.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" type="text/css" href="/webfonts/allison/allison-script.css">
-</head>
+{{> header}}
 
 <body
-  class="desktop admin-logged id-5361 in-low-carb-3 template-11 type-product type-detail multiple-columns-body columns-3 ums_back_to_shop_buttons--on ums_product_quantity--on ums_product_images_lazy_load--on mobile-header-version-0 unveiled"
-  cz-shortcut-listen="true">
-  <div class="overall-wrapper">
-    {{> header}}
-    <div id="content-wrapper" class="container content-wrapper">
-      <div class="content-wrapper-in">
-
-        {{> aside}}
-        {{> main-product-top}}
-
-
-        {{!-- {{> widget-template-koma-pure-pobo}} --}}
-        {{> page-final}}
-
-
-        {{!-- {{> test}} --}}
-        {{!-- {{> pobo-example}} --}}
-
-        {{> main-product-bottom}}
-      </div>
-    </div>
-  </div>
-  <script type="module" src="./index.js"></script>
-</body>
-</html>
+  class="desktop id-5250 in-test template-11 type-product type-detail one-column-body columns-mobile-2 columns-4 blank-mode blank-mode-css ums_product_images_lazy_load--on ums_a11y_category_page--off mobile-header-version-0">
+  {{> body__header}} <div id="content-wrapper" class="container content-wrapper">
+    {{> body__product-top}}
+      {{> product--cokoladove-koma}}
+    {{> body__product-bottom}}
+{{> footer}}

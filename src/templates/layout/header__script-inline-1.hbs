@@ -1,0 +1,101 @@
+<script>
+    dataLayer = [];
+    dataLayer.push({
+      'shoptet': {
+        "pageType": "productDetail",
+        "currency": "CZK",
+        "currencyInfo": {
+          "decimalSeparator": ",",
+          "exchangeRate": 1,
+          "priceDecimalPlaces": 2,
+          "symbol": "K\u010d",
+          "symbolLeft": 0,
+          "thousandSeparator": " "
+        },
+        "language": "cs",
+        "projectId": 649623,
+        "product": {
+          "id": 86139,
+          "guid": "2e5f05c2-1b8e-11f0-864e-32c0bcef7a16",
+          "hasVariants": false,
+          "codes": [
+            {
+              "code": "P14309"
+            }
+          ],
+          "code": "P14309",
+          "name": "[TEST - EDITOVATELN\u00c9 POBO] Passion Low sugar cookies \u010cokol\u00e1dov\u00e9 k\u00f3ma 70g",
+          "appendix": "",
+          "weight": 0,
+          "manufacturer": "Passion nutrition",
+          "manufacturerGuid": "1EF5335EA0F963E4A432DA0BA3DED3EE",
+          "currentCategory": "Test [NEKUPOVAT]",
+          "currentCategoryGuid": "1e50bef2-299c-11f0-a244-0ebfb91bf821",
+          "defaultCategory": "Test [NEKUPOVAT]",
+          "defaultCategoryGuid": "1e50bef2-299c-11f0-a244-0ebfb91bf821",
+          "currency": "CZK",
+          "priceWithVat": 55
+        },
+        "stocks": [
+          {
+            "id": "ext",
+            "title": "Sklad",
+            "isDeliveryPoint": 0,
+            "visibleOnEshop": 1
+          }
+        ],
+        "cartInfo": {
+          "id": null,
+          "freeShipping": false,
+          "leftToFreeGift": {
+            "formattedPrice": "0 K\u010d",
+            "priceLeft": 0
+          },
+          "freeGift": false,
+          "leftToFreeShipping": {
+            "priceLeft": 1000,
+            "dependOnRegion": 0,
+            "formattedPrice": "1 000 K\u010d"
+          },
+          "discountCoupon": [],
+          "getNoBillingShippingPrice": {
+            "withoutVat": 0,
+            "vat": 0,
+            "withVat": 0
+          },
+          "cartItems": [],
+          "taxMode": "ORDINARY"
+        },
+        "cart": [],
+        "customer": {
+          "priceRatio": 1,
+          "priceListId": 1,
+          "groupId": null,
+          "registered": false,
+          "mainAccount": false
+        }
+      }
+    });
+    dataLayer.push({
+      'cookie_consent': {
+        "marketing": "granted",
+        "analytics": "granted"
+      }
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+      shoptet.consent.onAccept(function (agreements) {
+        if (agreements.length == 0) {
+          return;
+        }
+        dataLayer.push({
+          'cookie_consent': {
+            'marketing': (agreements.includes(shoptet.config.cookiesConsentOptPersonalisation)
+              ? 'granted' : 'denied'),
+            'analytics': (agreements.includes(shoptet.config.cookiesConsentOptAnalytics)
+              ? 'granted' : 'denied')
+          },
+          'event': 'cookie_consent'
+        });
+      });
+    });
+  </script>

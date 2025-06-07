@@ -21,7 +21,7 @@
         @media screen and (max-width: 420px) {
         } 
     }
-    /* .widget-container { */
+    .widget-container {
         /* .passion-button {
             background: var(--passion-color-primary);
             border-radius: 50px;
@@ -106,8 +106,8 @@
                 padding: 0;
                 margin: 0;
             }
-        }
-    } */
+        }*/
+    } 
     
     .chip-link {
         background: white;
@@ -136,24 +136,5 @@
     a.passion-script:hover {
         text-decoration: underline;
     }
-    .script-image-wrapper {
-        display: inline-block;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        .script-image-wrapper__text {
-            color: white;
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border-width: 0;
-        }
-    }
-    
-
+  
 }

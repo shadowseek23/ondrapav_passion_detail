@@ -253,7 +253,7 @@ async function build() {
     buildOptions.outfile = "./dist/"+entryFile;
     await esbuild.build(buildOptions);
   } 
-  await generateHtml();
+  // await generateHtml();
   /*
    * npm run images
    */

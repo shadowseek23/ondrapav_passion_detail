@@ -1,8 +1,8 @@
 $tinymobile: 380px;
-$tablet: 769px; /* todo */  
+$tablet: 768px; /* todo */  
 $desktop: 992px; /* todo */
 $widescreen: 1200px;
-$fullhd: 1408px; /* todo */
+$fullhd: 1440px; /* todo */
 
 @define-mixin tiny-mobile {
     @media screen and (max-width: calc($tinymobile - 1px)) {

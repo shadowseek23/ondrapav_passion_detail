@@ -1,0 +1,116 @@
+</div>
+<div class="extended-description">
+    <h3>Doplňkové parametry</h3>
+    <table class="detail-parameters">
+        <tbody>
+            <tr>
+                <th> <span class="row-header-label"> Kategorie<span class="row-header-label-colon">:</span> </span>
+                </th>
+                <td> <a href="/test/">Test [NEKUPOVAT]</a> </td>
+            </tr>
+            <tr class="productEan">
+                <th> <span class="row-header-label productEan__label"> EAN<span class="row-header-label-colon">:</span>
+                    </span> </th>
+                <td> <span class="productEan__value">8594222600053</span> </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+</div>
+<div id="ratingTab" class="tab-pane fade" role="tabpanel" data-editorid="rating">
+    <p data-testid="textCommentNotice">Buďte první, kdo napíše příspěvek k této položce. </p>
+    <div id="ratingWrapper" class="rate-wrapper unveil-wrapper" data-parent-tab="ratingTab">
+        <div class="rate-wrap row">
+            <div class="rate-average-wrap col-xs-12 col-sm-6">
+                <div class="add-comment rate-form-trigger" data-unveil="rate-form" aria-expanded="false"
+                    aria-controls="rate-form" role="button"> <span class="link-like rating-icon"
+                        data-testid="buttonAddRating">Přidat hodnocení</span> </div>
+            </div>
+        </div>
+        <div id="rate-form" class="vote-form js-hidden">
+            <form action="/action/ProductDetail/RateProduct/" method="post" id="formRating"> <input type="hidden"
+                    name="productId" value="86139" /> <input type="hidden" name="score" value="5" />
+                <div class="row">
+                    <div class="form-group js-validated-element-wrapper col-xs-12 col-sm-6"> <input type="text"
+                            name="fullName" value="" class="form-control col-xs-12" placeholder="Jméno"
+                            data-testid="inputFullName" /> <span class="no-display">Nevyplňujte toto pole:</span>
+                        <input type="text" name="surname" value="" class="no-display" />
+                    </div>
+                    <div class="form-group js-validated-element-wrapper col-xs-12 col-sm-6"> <input type="email"
+                            name="email" value="" class="form-control col-xs-12" placeholder="E-mail"
+                            data-testid="inputEmail" /> </div>
+                    <div class="col-xs-12">
+                        <div class="form-group js-validated-element-wrapper"> <textarea name="description"
+                                class="form-control" rows="7" placeholder="Jak jste s produktem spokojeni?"
+                                data-testid="inputRatingDescription"></textarea> </div>
+                        <div class="form-group">
+                            <div class="star-wrap stars"> <span class="star star-on" data-score="1"></span> <span
+                                    class="star star-on" data-score="2"></span> <span class="star star-on"
+                                    data-score="3"></span> <span class="star star-on" data-score="4"></span> <span
+                                    class="star star-on current" data-score="5"></span> </div>
+                        </div>
+                        <div class="form-group js-validated-element-wrapper consents consents-first"> <input
+                                type="hidden" name="consents[]" id="ratingConsents15" value="15"
+                                data-special-message="validatorConsent" /> <label for="ratingConsents15"
+                                class="whole-width"> Vložením hodnocení souhlasíte s <a
+                                    href="https://www.gymtime.cz/podminky-ochrany-osobnich-udaju/" target="_blank"
+                                    rel="noopener noreferrer">podmínkami ochrany osobních údajů</a> </label> </div>
+                        <div class="form-group"> <input type="submit" value="Odeslat hodnocení"
+                                class="btn btn-sm btn-primary" data-testid="buttonSendRating" /> </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="productDiscussion" class="tab-pane fade" role="tabpanel" data-testid="areaDiscussion">
+    <div id="discussionWrapper" class="discussion-wrapper unveil-wrapper" data-parent-tab="productDiscussion"
+        data-testid="wrapperDiscussion">
+        <div class="discussionContainer js-discussion-container" data-editorid="discussion">
+            <p data-testid="textCommentNotice">Buďte první, kdo napíše příspěvek k této položce. </p>
+            <div class="add-comment discussion-form-trigger" data-unveil="discussion-form" aria-expanded="false"
+                aria-controls="discussion-form" role="button"> <span class="link-like comment-icon"
+                    data-testid="buttonAddComment">Přidat komentář</span> </div>
+            <div id="discussion-form" class="discussion-form vote-form js-hidden">
+                <form action="/action/ProductDiscussion/addPost/" method="post" id="formDiscussion"
+                    data-testid="formDiscussion"> <input type="hidden" name="formId" value="9" /> <input type="hidden"
+                        name="discussionEntityId" value="86139" />
+                    <div class="row">
+                        <div class="form-group col-xs-12 col-sm-6"> <input type="text" name="fullName" value=""
+                                id="fullName" class="form-control" placeholder="Jméno" data-testid="inputUserName" />
+                            <span class="no-display">Nevyplňujte toto pole:</span> <input type="text" name="surname"
+                                value="" class="no-display" />
+                        </div>
+                        <div class="form-group js-validated-element-wrapper no-label col-xs-12 col-sm-6"> <input
+                                type="email" name="email" value="" id="email" class="form-control js-validate-required"
+                                placeholder="E-mail" data-testid="inputEmail" /> </div>
+                        <div class="col-xs-12">
+                            <div class="form-group"> <input type="text" name="title" id="title" class="form-control"
+                                    placeholder="Název" data-testid="inputTitle" /> </div>
+                            <div class="form-group no-label js-validated-element-wrapper"> <textarea name="message"
+                                    id="message" class="form-control js-validate-required" rows="7"
+                                    placeholder="Komentář" data-testid="inputMessage"></textarea> </div>
+                            <div class="form-group js-validated-element-wrapper consents consents-first"> <input
+                                    type="hidden" name="consents[]" id="discussionConsents21" value="21"
+                                    data-special-message="validatorConsent" /> <label for="discussionConsents21"
+                                    class="whole-width"> Vložením komentáře souhlasíte s <a
+                                        href="https://www.gymtime.cz/podminky-ochrany-osobnich-udaju/" target="_blank"
+                                        rel="noopener noreferrer">podmínkami ochrany osobních údajů</a> </label> </div>
+                            <div class="form-group"> <input type="submit" value="Odeslat komentář"
+                                    class="btn btn-sm btn-primary" data-testid="buttonSendComment" /> </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
