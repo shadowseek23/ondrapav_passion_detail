@@ -1,0 +1,5 @@
+@import "../_config.mixin.css";
+:root {
+    @mixin config;
+    --img-chevron: url("https://cdn.myshoptet.com/usr/www.passionnutrition.cz/user/documents/img/detail_produktu/passion/icon-chevron.svg");
+}

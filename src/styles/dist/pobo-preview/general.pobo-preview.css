@@ -1,0 +1,5 @@
+@import "../../general.mixin.css";
+
+.content-editor__preview-inner {
+    @mixin general;
+}

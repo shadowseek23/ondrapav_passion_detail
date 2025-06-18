@@ -1,0 +1,6 @@
+@import "../widgets.mixin.css";
+.p-detail-tabs-wrapper #tab-content #description .description-inner .basic-description 
+#pobo-standard-widget,
+.content-editor__component-list {
+    @mixin widgets;
+}

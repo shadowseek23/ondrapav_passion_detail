@@ -1,0 +1,5 @@
+@import "../_config.mixin.css";
+:root {
+    @mixin config;
+    --img-chevron: url("/images/CokoladoveKoma/icon-chevron.svg");
+}
