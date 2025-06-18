@@ -85,13 +85,13 @@
 
             padding: 3.6em 2.5em 3.6em 2.5em ;
             @mixin until-widescreen {/* @media screen and (max-width: 1199px) { */
-                padding: 3em 1.5em 3em 1.5em ;
+                padding: 3.6em 1.5em 3em 1.5em ;
             }
             @mixin mobile {/*@media screen and (max-width: 767px) {*/
-                padding: 3em 2.5em 2em 2.5em;
+                padding: 3.6em 2.5em 2em 2.5em;
             }
             @mixin tiny-mobile {/*@media screen and (max-width: 420px) {*/
-                padding: 2em 1.8em 1em 1.8em;
+                padding: 3.6em 1.8em 1em 1.8em;
             }
         }      
     }
@@ -171,7 +171,6 @@
     }
 }
 @define-mixin widget-jumbotron-one { /*.rc-jumbotron-one-with-button*/
-    .widget-projector, 
     .rc-jumbotron-one {
         height: 100%;
         &__wrap {
@@ -191,6 +190,7 @@
         }
         &__content {                
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             background: none;
@@ -232,7 +232,8 @@
             display: flex;
             flex-direction: row;
             align-items: stretch;  
-            height: 100%;   
+            height: 100%;  
+            position: relative; 
         }
         &__content {
             width: 70%;
@@ -312,7 +313,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        z-index: 50;
+        z-index: 1;
         width: auto;
         height: auto;
     }

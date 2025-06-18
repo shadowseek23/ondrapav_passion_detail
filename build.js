@@ -138,9 +138,9 @@ const postcssProcessor = postcss([
 */
 const buildOptions = {
   entryPoints: [
-    'src/index.js',
-    'src/scripts/**/*.js',
-    'src/styles/**/*.css'
+    'src/index.js'
+    // 'src/scripts/**/*.js',
+    // 'src/styles/**/*.css'
   ],
   bundle: true,
   format: 'cjs',

@@ -5,7 +5,7 @@
 @define-mixin by-id {
     /* 01 - USP */
     [data-pobo-widget-id="220"],
-    [data-cy="widget-list-item-220"] {
+    [data-cy="widget-list-item-220"] > div > div {
 
         @mixin larger-text;
         @mixin from-widescreen {
@@ -64,8 +64,11 @@
                 }
             }
         }
-        @media screen and (min-width: 768px) and (max-width: 1439px) {
-            .inner-flex-container {display: none;}
+        @mixin until-fullhd {            
+            .inner-flex-container {display: none !important;}
+        }
+        /* @media screen and (min-width: 768px) and (max-width: 1439px) { */
+        @mixin from-tablet-to-widescreen {
             .rc-image-half-left__img {
                 top: auto;
                 right: 4em;
@@ -74,10 +77,9 @@
                 transform: scale(1.2);
                 transform-origin: bottom right;
             }
-        }
-    
-        @media screen and (max-width: 767px) {
-            .inner-flex-container {display: none;}
+        }    
+        /* @media screen and (max-width: 767px) { */
+        @mixin mobile {
             .rc-image-half-left {
                 padding: 0;
          
@@ -101,31 +103,35 @@
     }
     /* 02 - vyhody */
     [data-pobo-widget-id="221"],
-    [data-cy="widget-list-item-221"] {
+    [data-cy="widget-list-item-221"] > div > div {
         background: #F0D7D8;
     }
     [data-pobo-widget-id="221"] { /* nechceme aby se widget schovaval v pobo editoru */
-        @media screen and (min-width: 1440px) {
+        /* @media screen and (min-width: 1440px) { */
+        @mixin from-fullhd {        
             display: none;
         }
     }
     /* 03 - chut*/
     [data-pobo-widget-id="222"],
-    [data-cy="widget-list-item-222"] {
+    [data-cy="widget-list-item-222"] > div > div {
         @mixin larger-text;
         h2 {
             margin: 0;
-            max-width: 10em;
+            max-width: 8em;
             font-size: 3.4em;
+            @mixin tiny-mobile {
+                font-size: 2.6em !important;
+            }            
+            @mixin until-widescreen {
+                font-size: 3em;
+            }
             em {
                 font-size: 1.8em;
                 line-height: 0.45em !important;
                 top: unset;
                 bottom: -0.36em;
 
-            }
-            @mixin until-widescreen {
-                font-size: 3em;
             }
             margin-bottom: 0.2em;
         }
@@ -135,28 +141,54 @@
     }
     /* 04 - hlavni ingredience */
     [data-pobo-widget-id="223"],
-    [data-cy="widget-list-item-223"] {
+    [data-cy="widget-list-item-223"] > div > div {
         min-height: 20em;
-
+            @mixiny tiny-mobile {
+                object-position: center bottom;
+                transform: translateY(50%);
+                bottom: 0; top: auto !important;
+                background: red !important;
+            }
         .rc-jumbotron-one__wrap-img {
-            object-position: center top;
-            transform: translateY(25%);
+            object-position: center bottom;
+            transform: translateY(50%);
+
+            @mixin touch {
+                height: 400px;
+            }
+            
+            @mixin only-tablet {  
+                object-position: center bottom;              
+                transform: translateY(25%);
+                
+            }
+            @mixin mobile {                
+                object-position: center bottom;
+                transform: translateY(25%);
+            }
+            @mixiny tiny-mobile {
+                object-position: center bottom;
+                transform: translateY(50%);
+                bottom: 0; top: auto !important;
+                background: red !important;
+            }
 
         }
         h2, h2.rc-jumbotron-one__preheading {
             margin-bottom: 0.6em;
             max-width:380px !important;
         }
-        .rc-jumbotron-one__content-text {
-            padding-bottom: 5em;
-            @media screen and (max-width:767px) {
-                padding-bottom: 7em;
+        .rc-jumbotron-one__content {
+            padding-top: 5em;
+            padding-bottom: 7em;
+            @mixin mobile {
+                padding-bottom: 10em;
             }
         }
     }
     /* 05 - stevie */
     [data-pobo-widget-id="224"],
-    [data-cy="widget-list-item-224"] {
+    [data-cy="widget-list-item-224"] > div > div {
         /*
         * widget-specific
         */
@@ -206,7 +238,7 @@
     }
     /* 06 - vlaknina */
     [data-pobo-widget-id="230"],
-    [data-cy="widget-list-item-"] {
+    [data-cy="widget-list-item-"] > div > div {
         /*
         * widget specific
         */
@@ -271,7 +303,7 @@
     }
     /* 07 - protein */
     [data-pobo-widget-id="231"],
-    [data-cy="widget-list-item-231"] {
+    [data-cy="widget-list-item-231"] > div > div {
         @mixin larger-text;
         .rc-image-half-left__text {
             align-items: stretch;
@@ -294,7 +326,7 @@
     }
     /* 08 - filozofie */
     [data-pobo-widget-id="232"],
-    [data-cy="widget-list-item-232"] {
+    [data-cy="widget-list-item-232"] > div > div {
         @mixin widget-image-half--larger-on-desktop;
         h3 {
             margin-bottom: 0.8em;
@@ -319,7 +351,7 @@
     }
     /* 09 - idealni svacinka */
     [data-pobo-widget-id="233"],
-    [data-cy="widget-list-item-233"] {
+    [data-cy="widget-list-item-233"] > div > div {
 
         min-height: 28em;
         .rc-image-half-left__image {
@@ -347,7 +379,7 @@
     }
     /* 10 - mini cookies */
     [data-pobo-widget-id="234"],
-    [data-cy="widget-list-item-234"] {        
+    [data-cy="widget-list-item-234"] > div > div {        
         @mixin --make-clickable;
         h2 {
             margin-bottom: 0.3em;
